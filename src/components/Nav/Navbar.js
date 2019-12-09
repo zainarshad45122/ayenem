@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import { slide as Menu } from 'react-burger-menu'
+import './Navbar.css'
 class Navbar extends Component {
   constructor() {
     super()
@@ -6,58 +8,26 @@ class Navbar extends Component {
   }
 
   render() {
-    return (
+    return ( 
       
         <header>
+         
           <div className="header-logo">
             <a href="index.html">ayenem</a>
           </div>
+      <Menu right disableAutoFocus width={ 230 } >
+      <a  className="menu-item--small item" href="" style={{ color:'white', marginTop:'-30px'  }}><b style={{ fontSize:'24px' }}>ayenem.</b></a>
+      <br/>
+        <a  className="menu-item--small" href="#home" style={{ color:'lightgrey' }}>Home</a>
+        <a  className="menu-item--small" href="#about" style={{ color:'lightgrey' }}>About</a>
+        <a  className="menu-item--small" href="#services" style={{ color:'lightgrey' }}>Services</a>
+        <a  className="menu-item--small" href="#partners" style={{ color:'lightgrey' }}>Partners</a>
+        <a  className="menu-item--small" href="#portfolio" style={{ color:'lightgrey' }}>Values</a>
+        <a  className="menu-item--small" href="#contact" style={{ color:'lightgrey' }}>Contact</a>
+      </Menu>
+          
 
-          <a id="header-menu-trigger" href="#0">
-            <span className="header-menu-text">Menu</span>
-            <span className="header-menu-icon"></span>
-          </a>
-
-          <nav id="menu-nav-wrap">
-            <a href="#0" className="close-button" title="close">
-              <span>Close</span>
-            </a>
-
-            <h3>ayenem.</h3>
-
-            <ul className="nav-list">
-              <li className="current">
-                <a className="smoothscroll" href="#home" title="">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a className="smoothscroll" href="#about" title="">
-                  About
-                </a>
-              </li>
-              <li>
-                <a className="smoothscroll" href="#services" title="">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a className="smoothscroll" href="#partners" title="">
-                  Partners
-                </a>
-              </li>
-              <li>
-                <a className="smoothscroll" href="#portfolio" title="">
-                  Values
-                </a>
-              </li>
-              <li>
-                <a className="smoothscroll" href="#contact" title="">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
+    
         </header>
     
     )
